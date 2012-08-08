@@ -22,4 +22,20 @@ describe("Bike", function() {
     expect(bike.lat).toEqual(40.017094);
     expect(bike.lng).toEqual(-105.283799);
   });
+
+  describe("#move", function(){
+
+    beforeEach(function(){
+      spyOn(bike, 'move');
+      newLoc = bike.move("north", 2.5);
+    });
+
+    it("gets called", function(){
+      expect(bike.move).toHaveBeenCalledWith("north", 2.5);
+    });
+
+    xit("returns and array", function(){
+      // May just check that the return type is an array or something; not sure.
+    });
+  });
 });

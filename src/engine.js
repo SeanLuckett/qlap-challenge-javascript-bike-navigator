@@ -9,3 +9,5 @@ Bike.prototype.width = 6;
 Bike.prototype.lat = 40.017094;
 Bike.prototype.lng = -105.283799;
 
+Bike.prototype.move = function(){
+};
