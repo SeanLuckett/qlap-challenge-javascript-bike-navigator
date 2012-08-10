@@ -23,6 +23,15 @@ describe("Bike", function() {
     expect(bike.lng).toEqual(-105.283799);
   });
 
+  it("is red by default", function(){
+    expect(bike.color).toEqual("red");
+  });
+
+  it("can start with any color", function(){
+    blueBike = new Bike("blue");
+    expect(blueBike.color).toEqual("blue");
+  });
+
   describe("#move", function(){
 
     it("throws an error when called with no arguments", function(){
